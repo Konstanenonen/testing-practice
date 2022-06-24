@@ -64,12 +64,11 @@ const caesarCipher = (string) => {
   return string.split(" ").map(cipherWord).join(" ");
 };
 
-const analyzeArray = (array) => {
-  return {
-    min: Math.min(...array),
-    max: Math.max(...array),
-    length: array.length,
-  };
-};
+const analyzeArray = (array) => ({
+  average: array.reduce((sum, next) => (sum += next), 0) / array.length,
+  min: Math.min(...array),
+  max: Math.max(...array),
+  length: array.length,
+});
 
 export { capitalize, reverseString, Calculator, caesarCipher, analyzeArray };

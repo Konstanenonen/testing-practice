@@ -79,5 +79,7 @@ test("analyzeArray TEST 3: min property return smallest number", () => {
 
 test("analyzeArray TEST 4: average property return array average", () => {
   const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  const object2 = analyzeArray([4, 5, 2]);
   expect(object.average).toBe(4);
+  expect(object2.average).toBeCloseTo(3.6666);
 });
