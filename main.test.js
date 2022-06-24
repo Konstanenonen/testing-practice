@@ -83,3 +83,13 @@ test("analyzeArray TEST 4: average property return array average", () => {
   expect(object.average).toBe(4);
   expect(object2.average).toBeCloseTo(3.6666);
 });
+
+test("analyzeArray TEST 5: testing all of the properties at the same time", () => {
+  const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(object).toEqual({
+    average: 4,
+    min: 1,
+    max: 8,
+    length: 6,
+  });
+});
