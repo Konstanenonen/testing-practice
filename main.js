@@ -64,4 +64,12 @@ const caesarCipher = (string) => {
   return string.split(" ").map(cipherWord).join(" ");
 };
 
-export { capitalize, reverseString, Calculator, caesarCipher };
+const analyzeArray = (array) => {
+  return {
+    min: Math.min(...array),
+    max: Math.max(...array),
+    length: array.length,
+  };
+};
+
+export { capitalize, reverseString, Calculator, caesarCipher, analyzeArray };

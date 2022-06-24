@@ -1,4 +1,10 @@
-import { Calculator, capitalize, reverseString, caesarCipher } from "./main";
+import {
+  Calculator,
+  capitalize,
+  reverseString,
+  caesarCipher,
+  analyzeArray,
+} from "./main";
 
 test("capitalize TEST 1: dog should change to Dog", () => {
   expect(capitalize("dog")).toBe("Dog");
@@ -52,4 +58,26 @@ test("caesarCipher TEST 4 wrapping from a to z and A to Z: ", () => {
   expect(
     caesarCipher("abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ")
   ).toBe("nopqrstuvwxyzabcdefghijklm NOPQRSTUVWXYZABCDEFGHIJKLM");
+});
+
+test("analyzeArray TEST 1: length property returns correct length", () => {
+  const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  const object2 = analyzeArray([]);
+  expect(object.length).toBe(6);
+  expect(object2.length).toBe(0);
+});
+
+test("analyzeArray TEST 2: max property returns largest number", () => {
+  const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(object.max).toBe(8);
+});
+
+test("analyzeArray TEST 3: min property return smallest number", () => {
+  const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(object.min).toBe(1);
+});
+
+test("analyzeArray TEST 4: average property return array average", () => {
+  const object = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(object.average).toBe(4);
 });
