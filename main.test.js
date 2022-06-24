@@ -18,7 +18,7 @@ test("reverseString TEST 1: emma should change to amme", () => {
   expect(reverseString("emma")).toBe("amme");
 });
 
-test("reverseString TEST 1: kuumailmapallo should change to ollapamliamuuk", () => {
+test("reverseString TEST 2: kuumailmapallo should change to ollapamliamuuk", () => {
   expect(reverseString("kuumailmapallo")).toBe("ollapamliamuuk");
 });
 
